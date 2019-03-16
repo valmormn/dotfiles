@@ -1,4 +1,4 @@
-liases
+# Aliases
 
 alias c="clear"
 alias pip="pip3"

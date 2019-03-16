@@ -1,4 +1,4 @@
-et up the prompt
+# Set up the prompt
 
 autoload -Uz promptinit
 promptinit

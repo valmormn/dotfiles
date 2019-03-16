@@ -1,6 +1,6 @@
 #
-rt PATH="/bin:$PATH"
-# export PATH="/usr/bin:$PATH"
+#export PATH="/bin:$PATH"
+#export PATH="/usr/bin:$PATH"
 #export PATH="~/.local/bin:$PATH"
 #export PATH="/usr/bin/python:$PATH"
 #export PATH="/usr/bin/python3:$PATH"
