@@ -1,0 +1,21 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "All my dotfiles",
+  "main": "index.js",
+  "scripts": {
+    "push": "git add . && git commit -am \"dotfiles\" && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valmormn/dotfiles.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valmormn/dotfiles/issues"
+  },
+  "homepage": "https://github.com/valmormn/dotfiles#readme"
+}
