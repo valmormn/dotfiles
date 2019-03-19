@@ -3,8 +3,9 @@
 All my dotfiles
 
 - .bashrc
+- bash_aliases
 - .zshrc
-- .virc
+- .vimrc
 
 
 # Ref
