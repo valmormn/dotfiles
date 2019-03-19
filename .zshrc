@@ -3,12 +3,13 @@ source $ZSH/oh-my-zsh.sh
 
 # source /home/v/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /home/v/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source ~/powerlevel9k/powerlevel9k.zsh-theme
+source ~/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme
+source ~/.mypowerline9krc
+
 
 # Aliases
-#
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -16,8 +17,15 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/v/.oh-my-zsh"
+export ZSH="/home/v/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -25,7 +33,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="agnoster"
 ZSH_THEME="powerlevel9k/powerlevel9k"
-#POWERLEVEL9K_MODE='nerdfont-complete'
+# POWERLEVEL9K_MODE='nerdfont-complete' # NÃO FUNCIONA
 POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Set list of themes to pick from when loading at random
@@ -54,10 +62,10 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -83,6 +91,10 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 plugins=(
   git
   wd
+  extract
+  #npm
+  themes
+  colored-man-pages
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
@@ -91,17 +103,17 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -123,3 +135,27 @@ source $ZSH/oh-my-zsh.sh
 wd() {
   . /home/v/bin/wd/wd.sh
 }
+
+# POWERLINESHELL
+# https://github.com/b-ryan/powerline-shell
+
+# function powerline_precmd() {
+#     PS1="$(powerline-shell --shell zsh $?)"
+# }
+
+# function install_powerline_precmd() {
+#   for s in "${precmd_functions[@]}"; do
+#     if [ "$s" = "powerline_precmd" ]; then
+#       return
+#     fi
+#   done
+#   precmd_functions+=(powerline_precmd)
+# }
+
+# if [ "$TERM" != "linux" ]; then
+#     install_powerline_precmd
+# fi
+
+
+# TERM=xterm-256color
+
