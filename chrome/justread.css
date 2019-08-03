@@ -1,0 +1,67 @@
+html {
+    /*overflow: hidden;*/
+    /*overflow-y: hidden;*/
+    /*overflow-x: hidden;*/
+}
+
+body {
+    color: whitesmoke;
+    background-color: #252525;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 22px;
+}
+
+::selection {
+  color: #1b1b1b;
+  background-color: yellow;
+}
+
+@font-face {
+	font-family: 'Noto Serif', serif;
+	url('https://fonts.googleapis.com/css?family=Noto+Serif|Open+Sans&display=swap');
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif', serif;
+}
+
+@font-face {
+	font-family: 'Open Sans', sans-serif;
+	url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+}
+
+p, li {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.45;
+}
+
+a {
+    color: rgb(0,169,224);
+}
+
+a:hover {
+    color: #00d2b8 !important;
+}
+
+
+img, video {
+    max-width: 600px;
+    text-align: center;
+}
+
+figcaption, .caption {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.simple-container {
+    max-width: 720px;
+    /*text-align: justify;*/
+    /*text-justify: inter-word;*/
+}
